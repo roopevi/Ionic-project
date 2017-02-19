@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Front</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Ionic Menu Starter</h3>
+
+  <ion-list>
+    <ion-item *ngFor="let image of images">
+        <img [src]="'http://media.mw.metropolia.fi/wbma/uploads/'+ (image.filename | thumbnail: 'small')" (click)="openFile(image.file_id)" >
+    </ion-item>
+  </ion-list>
+
+  <button ion-button secondary menuToggle>Toggle Menu</button>
+</ion-content>
